@@ -1,0 +1,105 @@
+/* Overall container */
+.activity-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Toggle button */
+.toggle-btn {
+  background: linear-gradient(135deg, #ffe66d, #ff6b6b);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+  background: linear-gradient(135deg, #ff6b6b, #ffe66d);
+  transform: scale(1.05);
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+}
+
+/* Wrapper for activity list with smooth transition */
+.activity-by-day-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    margin-top: 1rem;
+    will-change: height, opacity;
+
+}
+
+.activity-by-day-wrapper.show{
+  max-height: fit-content; /* enough to fit content */
+  opacity: 1;
+}
+
+/* The existing lively styles you liked before */
+.activity-by-day {
+  margin-top: 1rem;
+}
+
+.activity-day {
+  margin-bottom: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.activity-date {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff6b6b;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px dashed #ffa69e;
+  padding-bottom: 0.2rem;
+}
+
+.activity-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.activity-card {
+  background: linear-gradient(135deg, #ffe66d, #ff6b6b);
+  border-radius: 12px;
+  color: #fff;
+  flex: 1 1 220px;
+  padding: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px) rotate(-2deg);
+}
+
+.activity-category {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.activity-hours {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.activity-notes {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}

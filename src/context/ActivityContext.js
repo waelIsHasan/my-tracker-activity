@@ -4,6 +4,7 @@ const ActivityContext = createContext();
 
 export const ActivityProvider = ({ children }) => {
   const [activities, setActivities] = useState([]);
+  console.log(activities)
   useEffect(() => {
      const savedActivities = loadActivities();
     if (savedActivities.length > 0) {
